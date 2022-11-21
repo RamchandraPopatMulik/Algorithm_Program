@@ -9,22 +9,23 @@ namespace Algorithm_Program
 {
     public class InsertionSortMethod
     {
-        public void sort(IComparable[] array)
+        public void sort(int[] array)
         {
-            int index;
-            for(int i=1;i<array.Length;i++)
+            int n=array.Length;
+            for(int i=0;i<n-1;i++)
             {
-                IComparable word=array[i];
-                index = i - 1;
-                while((index>=0 )&& (array[index].CompareTo(word)>0))
+                for (int index = 0; index < n - i - 1; index++)
                 {
-                    array[index+1] = array[index];
-                    index--;
+                    if (array[index] > array[index + 1])
+                    {
+                        int temp = array[index];
+                        array[index] = array[index + 1];
+                        array[index + 1] = temp;
+                    }
                 }
-                array[index + 1] = word;
             }
         }
-        public void Display(IComparable[] array)
+        public void Display(int[] array)
         {
             int n = array.Length;
             for (int i = 0; i < n; i++)

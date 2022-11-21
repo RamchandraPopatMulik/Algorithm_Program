@@ -4,14 +4,14 @@
     {
         static void Main(string[] args)
         {
-            string [] names = {"Ram", "Sachin","Rahul","Mahesh","Shrikant","Sanjiv","Sourabh","Mohan","Sandip"};
+            int [] array = {51,56,9,565,6,32,57,36,78,35,26,65};
             InsertionSortMethod insertionSortMethod = new InsertionSortMethod();
             Console.WriteLine("Before Sorting Element are :");
-            insertionSortMethod.Display(names);
+            insertionSortMethod.Display(array);
 
-            insertionSortMethod.sort(names);
+            insertionSortMethod.sort(array);
             Console.WriteLine("After Sorting Elements are :");
-            insertionSortMethod.Display(names);
+            insertionSortMethod.Display(array);
             Console.ReadLine();
         }
     }
