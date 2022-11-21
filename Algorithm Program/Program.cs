@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Input input = new Input();
-            input.UserInput();
+            BinarySearch binarySearchData = new BinarySearch();
+            binarySearchData.BinarySearchWordCheck();
         }
     }
 }
