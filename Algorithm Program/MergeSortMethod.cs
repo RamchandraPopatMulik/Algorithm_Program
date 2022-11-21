@@ -7,65 +7,29 @@ using System.Threading.Tasks;
 
 namespace Algorithm_Program
 {
-    public class MergeSortMethod
+    public class Anagram
     {
-        public void merge(int[]array,int left,int mid,int right)
+        public void AnagramDetectionProgram()
         {
-            int sizeOfArray1=mid-left+1;
-            int sizeOfArray2=right-mid;
-            int[]tempLeft=new int[sizeOfArray1];
-            int[]tempRight=new int[sizeOfArray2];
-            int i, j;
-
-            for(i=0;i<sizeOfArray1;++i)
-               tempLeft[i]= array[left + i];
-            for (j = 0; j < sizeOfArray2; ++j)
-                tempRight[j] = array[mid + 1+j];
-            i = 0;
-            j= 0;
-            int k=left;
-            while(i<sizeOfArray1 && j<sizeOfArray2)
+            Console.WriteLine("Please Enter Your 1st Value :");
+            string firstname = Console.ReadLine();
+            Console.WriteLine("Please Enter Your 2st Value :");
+            string secondname = Console.ReadLine();
+            char[] character1 = firstname.ToLower().ToCharArray();
+            char[] character2 = secondname.ToLower().ToCharArray();
+            Array.Sort(character1);
+            Array.Sort(character2);
+            string val1 = new string(character1);
+            string val2 = new string(character2);
+            if(val1==val2)
             {
-                if (tempLeft[i] <= tempRight[j])
-                {
-                    array[k]= array[i];
-                    i++;
-                }
-                else
-                {
-                    array[k]= array[j];
-                    j++;
-                }
-                k++;
+                Console.WriteLine("Both Strings are Anagram");
             }
-            while(i< sizeOfArray1)
+            else
             {
-                array[k]=tempLeft[i];
-                i++;
-                k++;
-            }
-            while (j < sizeOfArray2)
-            {
-                array[k] = tempLeft[j];
-                j++;
-                k++;
+                Console.WriteLine("Both Strings are Not Anagram");
             }
         }
-        public void Sort(int[]array,int left,int right)
-        {
-            if (left < right)
-            {
-                int mid = left + (right - left) / 2;
-                Sort(array, left, mid);
-                Sort(array, mid + 1, right);
-                merge(array, left, mid, right);
-            }
-        }
-        public void Display(int[] array)
-        {
-            int n = array.Length;
-            for (int i = 0; i < n; i++)
-            Console.Write(array[i] + "  ");
-        }
+       
     }
 }
