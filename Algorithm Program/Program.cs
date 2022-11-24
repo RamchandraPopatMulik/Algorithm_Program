@@ -6,6 +6,7 @@
         {
             PrimeNumber  primeNumber = new PrimeNumber();
             primeNumber.CheckPrimeNumber(1,1000);
+            primeNumber.CheckPalindrome(121);
         }
     }
 }
