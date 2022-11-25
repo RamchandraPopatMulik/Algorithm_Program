@@ -1,4 +1,5 @@
-﻿using static Algorithm_Program.BinarySearch<string>;
+﻿using System.Threading.Tasks;
+using static Algorithm_Program.BinarySearch<string>;
 
 namespace Algorithm_Program
 {
@@ -6,12 +7,10 @@ namespace Algorithm_Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Please Enter Highest value : ");
-            int high = Convert.ToInt32(Console.ReadLine());
-            Console.Write($"Guess the Number between 0 and {high} : ");
-            Console.ReadLine();
-            FindNumber find = new FindNumber();
-            find.findnumber(high);
+            Console.Write("Enter the Number of Tasks : ");
+            int tasks = Convert.ToInt32(Console.ReadLine());
+            Task task = new Task();
+            task.TaskSceduleing(tasks);
         }
     }
 }
