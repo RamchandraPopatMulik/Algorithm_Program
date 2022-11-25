@@ -7,10 +7,23 @@ namespace Algorithm_Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the Number of Tasks : ");
-            int tasks = Convert.ToInt32(Console.ReadLine());
-            Task task = new Task();
-            task.TaskSceduleing(tasks);
+            MessageDemonstration messageDemonstration = new MessageDemonstration();
+            Console.WriteLine("Please Enter First Name : ");
+            string firstname = Console.ReadLine();
+            Console.WriteLine("Please Enter Last Name : ");
+            string lastname = Console.ReadLine();
+            Console.WriteLine("Please Enter Mobile Number with Country Code  : ");
+            string mobilenumber = Console.ReadLine();
+            Console.WriteLine("Please Enter Date : ");
+            string date = Console.ReadLine();
+            messageDemonstration.FirstAndLast(firstname);
+            messageDemonstration.FirstAndLast(lastname);
+            messageDemonstration.Mobile(mobilenumber);
+            messageDemonstration.Date(date);
+            Console.WriteLine(firstname);
+            Console.WriteLine(lastname);
+            Console.WriteLine(mobilenumber);
+            Console.WriteLine(date);
         }
     }
 }
