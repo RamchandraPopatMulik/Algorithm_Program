@@ -1,12 +1,17 @@
-﻿namespace Algorithm_Program
+﻿using static Algorithm_Program.BinarySearch<string>;
+
+namespace Algorithm_Program
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            PrimeNumber  primeNumber = new PrimeNumber();
-            primeNumber.CheckPrimeNumber(1,1000);
-            primeNumber.CheckPalindrome(121);
+            Console.Write("Please Enter Highest value : ");
+            int high = Convert.ToInt32(Console.ReadLine());
+            Console.Write($"Guess the Number between 0 and {high} : ");
+            Console.ReadLine();
+            FindNumber find = new FindNumber();
+            find.findnumber(high);
         }
     }
 }
